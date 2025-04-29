@@ -1,0 +1,40 @@
+server:
+  Port: 5005
+  RunMode: debug
+logger:
+  FilePath: ../logs/logs.log
+  encoding: json
+  level: debug
+cors:
+  allowOrigins:
+    - "*"
+  allowMethods:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+  allowHeaders:
+    - Origin
+    - Content-Type
+    - Authorization
+    - Accept
+  exposeHeaders:
+    - Content-Length
+    - Access-Control-Allow-Origin
+    - Access-Control-Allow-Headers
+    - Access-Control-Allow-Methods
+postgres:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: postgres
+  dbname: website-exercise
+  sslmode: disable
+
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+  password: redis
+  poolSize: 4000
+  poolTimeout: 10
